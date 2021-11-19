@@ -7,6 +7,17 @@
  * @package livtecq
  */
 
+// カスタム投稿タイプを作成
+add_action('init', function() {
+	register_post_type('item', [
+		'label' => '商品',
+		'public' => true,
+		'menu_position' => 5,
+		'menu_icon' => 'dashicons-store',
+		'supports' => ['thumbnail', 'title', 'editor']
+	]);
+});
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
