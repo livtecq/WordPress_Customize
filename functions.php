@@ -14,7 +14,7 @@ add_action('init', function() {
 		'public' => true,
 		'menu_position' => 5, // 商品表示場所指定
 		'menu_icon' => 'dashicons-store',
-		'supports' => ['thumbnail', 'title', 'editor',],
+		'supports' => ['thumbnail', 'title', 'editor', 'custom-fields'],
 		'has_archive' => true,
 		// 'hierarchical' => true, // 投稿タイプを固定ページにする('supports'パラメーターに'page-attributes'を含めなければならない。)
 		'show_in_rest' => true, // カスタム投稿タイプを新ビジュアルエディターに対応させる。
