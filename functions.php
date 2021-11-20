@@ -10,8 +10,17 @@
 // ショートコードを記述する。
  add_shortcode('date', function() {
 	return get_the_title();
-	return date('Y年 n月 j日 H:i:s');
-}); 
+	// return date('Y年 n月 j日 H:i:s');
+});
+
+// ショートコードにパラメーターをつける
+add_shortcode('sum', function($atts) {
+	$atts = shortcode_atts([
+		'x' => 0,
+		'y' => 0,
+	], $atts, 'sum');
+	return $atts['x'] + $atts['y'];
+});
 
 // カスタム投稿タイプを作成
 add_action('init', function() {
