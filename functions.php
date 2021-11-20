@@ -12,10 +12,11 @@ add_action('init', function() {
 	register_post_type('item', [
 		'label' => '商品',
 		'public' => true,
-		'menu_position' => 5,
+		'menu_position' => 5, // 商品表示場所指定
 		'menu_icon' => 'dashicons-store',
-		'supports' => ['thumbnail', 'title', 'editor'],
-		'has_archive' => true
+		'supports' => ['thumbnail', 'title', 'editor',],
+		'has_archive' => true,
+		// 'hierarchical' => true, // 投稿タイプを固定ページにする('supports'パラメーターに'page-attributes'を含めなければならない。)
 	]);
 });
 
