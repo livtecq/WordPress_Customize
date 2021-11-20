@@ -19,6 +19,15 @@ add_action('init', function() {
 		// 'hierarchical' => true, // 投稿タイプを固定ページにする('supports'パラメーターに'page-attributes'を含めなければならない。)
 		'show_in_rest' => true, // カスタム投稿タイプを新ビジュアルエディターに対応させる。
 	]);
+
+	// カスタム分類（タクソノミー）で新しい分類項目を作成する。
+	register_taxonomy('genre', 'item', [
+		'label' => '商品ジャンル',
+		'hierarchical' => true,
+		// 'hierarchical' => false,	//false,または、削除するとタグのような見た目になる。
+		'show_in_rest' => true, // カスタム投稿タイプを新ビジュアルエディターに対応させる。
+
+	]);
 });
 
 if ( ! defined( '_S_VERSION' ) ) {
