@@ -17,6 +17,7 @@ add_action('init', function() {
 		'supports' => ['thumbnail', 'title', 'editor',],
 		'has_archive' => true,
 		// 'hierarchical' => true, // 投稿タイプを固定ページにする('supports'パラメーターに'page-attributes'を含めなければならない。)
+		'show_in_rest' => true, // カスタム投稿タイプを新ビジュアルエディターに対応させる。
 	]);
 });
 
