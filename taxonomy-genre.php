@@ -16,6 +16,14 @@ get_header();
 
 			<header class="page-header">
 				<h1>livtecショップ</h1>
+                <!-- カスタム分類のナビゲーション作成 -->
+                <?php $terms = get_terms('genre'); ?>
+                <ul class="nav">
+                    <?php foreach ($terms as $term): ?>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo get_term_link($term); ?>"><?php echo esc_html($term->name); ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+
                 <h2><?php the_archive_title(); ?></h2>
 
 				<!-- <?php
