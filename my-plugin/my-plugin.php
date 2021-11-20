@@ -11,3 +11,13 @@ add_shortcode('date', function() {
 	return get_the_title();
 	// return date('Y年 n月 j日 H:i:s');
 });
+
+// アクションフックとは
+
+// add_action('get_header', function() {
+//     echo 'アクションフックが動作しました';
+// });
+
+add_action('get_footer', function() {
+    echo 'アクションフックが動作しました';
+});
