@@ -21,3 +21,8 @@ add_shortcode('date', function() {
 add_action('get_footer', function() {
     echo 'アクションフックが動作しました';
 });
+
+// フィルターフックとは
+add_filter('the_title', function($title) {
+    return '□' . $title; // フィルターフックでは必ずreturnする必要がある。
+});
